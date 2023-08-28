@@ -18,6 +18,7 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix'=>'api/service/bengkels'], function() use($router){
 
     $router->get('/', 'BengkelController@index');
+    $router->get('/approvedbengkel', 'BengkelController@approvedbengkel');
     $router->post('/', 'BengkelController@create');
     $router->get('/{id_bengkel}', 'BengkelController@show');
     $router->put('/{id_bengkel}', 'BengkelController@update');
