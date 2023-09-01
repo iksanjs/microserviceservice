@@ -23,6 +23,12 @@ class BengkelController extends Controller
       return response()->json($bengkels);
     }
 
+    public function approvedbengkel()
+    {
+        $bengkels = Bengkel::where('approval', 'Approved')->get();
+        return response()->json($bengkels);
+    }
+
     public function create(Request $request)
     {
         // Lakukan validasi input

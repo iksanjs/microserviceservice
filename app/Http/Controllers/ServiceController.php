@@ -64,6 +64,7 @@ class ServiceController extends Controller
             'keterangan_sparepart' => $keterangan_sparepart,
             'harga_jasa' => $validatedData['harga_jasa'],
             'total_harga_service' => $validatedData['total_harga_service'],
+            'keterangan' => $request->keterangan,
             'approval' => 'Proses Approval',
         ]);
 
